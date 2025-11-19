@@ -36,7 +36,8 @@ O projeto requer as seguintes bibliotecas padrão do Arduino IDE (já inclusas n
 Este projeto é projetado para ser testado no simulador Wokwi.
 
 ![alt text](image.png)  
-🔗 [Acesse aqui](https://wokwi.com/projects/447930763074494465)
+🔗 [Wokwi](https://wokwi.com/projects/447930763074494465)   
+📽️ [Video Demonstrativo](https://youtu.be/xTeYCr2AWuM)
 
 1. Inicialização
 Clique em "Start Simulation".
@@ -62,6 +63,12 @@ HTTP OK (200) — Confirma o envio de dados.
 4. Pausa Inteligente (Timer)
 
 O timer só é ativado quando a Postura Correta é detectada, incentivando pausas após o trabalho focado.
+
+| Ação                        | Lógica no Código                                                        | Feedback                                      |
+| --------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- | 
+| **Início da Contagem**      | O flag isWorking é ativado e a variável workSessionStartTime é gravada. | Iniciando contagem de tempo de trabalho...    |
+| **Alerta de Pausa**         | A função checkBreakTime() verifica se (currentTime - workSessionStartTime) é maior que Descanso | LED Vermelho acende, Buzzer toca e Status: Hora da Pausa! |
+| **Reinício do Ciclo**      | Mover o slider para > DistanciaCorreta. A variável onBreak é desativada. | Usuário saiu para a pausa. Reiniciando ciclo. |
 
 # 📈 Impacto e Relevância
 
